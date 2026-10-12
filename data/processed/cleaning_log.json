@@ -1,0 +1,147 @@
+[
+  {
+    "table": "clients",
+    "step": "duplicates",
+    "detail": "Removed exact duplicate rows and repeated client_id values (kept first)",
+    "exact_duplicates_removed": 0,
+    "duplicate_ids_removed": 0,
+    "rows_before": 2000,
+    "rows_after": 2000
+  },
+  {
+    "table": "clients",
+    "step": "normalise client_type",
+    "detail": "Case/whitespace fixed, synonyms of Corporate mapped to 'Company' (label used in the data)",
+    "unique_before": 2,
+    "unique_after": 2
+  },
+  {
+    "table": "clients",
+    "step": "normalise gender",
+    "detail": "M/F -> Male/Female; anything else -> 'Unknown'"
+  },
+  {
+    "table": "clients",
+    "step": "normalise acquisition_purpose",
+    "detail": "Case fixed; 'Personal use' style labels mapped to 'Home'"
+  },
+  {
+    "table": "clients",
+    "step": "normalise loan_applied",
+    "detail": "yes/y/true/1 -> Yes ; no/n/false/0 -> No"
+  },
+  {
+    "table": "clients",
+    "step": "normalise country/region/referral_channel",
+    "detail": "Whitespace/case fixed; USA & UK aliases unified"
+  },
+  {
+    "table": "clients",
+    "step": "geography consistency",
+    "detail": "Every region should map to exactly one country",
+    "regions_in_more_than_one_country": 0
+  },
+  {
+    "table": "clients",
+    "step": "validate satisfaction_score",
+    "detail": "Scores must be within 1-5; others set to missing",
+    "invalid_values": 0
+  },
+  {
+    "table": "clients",
+    "step": "date_of_birth -> age",
+    "detail": "Parsed mixed date layouts; age = (reference date 2025-12-01 - DOB)/365.25. Raw DOB is NOT used in ML, only age.",
+    "unparseable_dob": 0,
+    "implausible_ages": 0
+  },
+  {
+    "table": "clients",
+    "step": "missing values",
+    "detail": "Numeric -> median, categorical -> 'Unknown' (counts below are values that needed filling)",
+    "filled_age": 0,
+    "filled_satisfaction_score": 0,
+    "filled_client_type": 0,
+    "filled_gender": 0,
+    "filled_country": 0,
+    "filled_region": 0,
+    "filled_acquisition_purpose": 0,
+    "filled_loan_applied": 0,
+    "filled_referral_channel": 0
+  },
+  {
+    "table": "clients",
+    "step": "derived flags",
+    "detail": "is_investment, loan_flag, is_company, is_international (country != most common country 'USA')"
+  },
+  {
+    "table": "clients",
+    "step": "privacy",
+    "detail": "first_name / last_name dropped (personal identifiers, no analytical value)"
+  },
+  {
+    "table": "properties",
+    "step": "duplicates",
+    "detail": "Removed exact duplicates and repeated listing_id values",
+    "exact_duplicates_removed": 0,
+    "duplicate_ids_removed": 0,
+    "rows_before": 10000,
+    "rows_after": 10000
+  },
+  {
+    "table": "properties",
+    "step": "sale_price -> numeric",
+    "detail": "Removed '$' and ',' and converted to float (assumed USD)",
+    "unparseable": 0
+  },
+  {
+    "table": "properties",
+    "step": "transaction_date",
+    "detail": "Parsed as month-first; every value is the 1st of a month, so data is monthly",
+    "unparseable": 0,
+    "first_date": "2024-01-01",
+    "last_date": "2025-12-01"
+  },
+  {
+    "table": "properties",
+    "step": "validate floor_area_sqft",
+    "detail": "Non-positive values treated as missing and filled with median",
+    "non_positive": 0,
+    "filled": 0
+  },
+  {
+    "table": "properties",
+    "step": "validate sale_price_usd",
+    "detail": "Non-positive values treated as missing and filled with median",
+    "non_positive": 0,
+    "filled": 0
+  },
+  {
+    "table": "properties",
+    "step": "status vs buyer consistency",
+    "detail": "Sold listings must have client_ref, Available must not",
+    "sold_without_buyer": 0,
+    "available_with_buyer": 0
+  },
+  {
+    "table": "properties",
+    "step": "outliers",
+    "detail": "IQR (1.5xIQR) rule used for detection only; no rows removed because extreme values are valid high-value units, not errors",
+    "outliers_sale_price_usd": 0,
+    "outliers_floor_area_sqft": 0,
+    "outliers_price_per_sqft": 94
+  },
+  {
+    "table": "master",
+    "step": "join clients + properties",
+    "detail": "LEFT JOIN clients.client_id = properties.client_ref on SOLD listings aggregated per client",
+    "clients": 2000,
+    "clients_without_purchase": 0
+  },
+  {
+    "table": "master",
+    "step": "transaction table",
+    "detail": "Sold listings joined to buyer attributes",
+    "rows": 7305,
+    "orphan_listings_without_matching_client": 0
+  }
+]

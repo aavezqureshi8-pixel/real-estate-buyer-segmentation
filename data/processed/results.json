@@ -1,0 +1,826 @@
+{
+  "dataset": {
+    "clients": 2000,
+    "listings": 10000,
+    "sold_listings": 7305,
+    "available_listings": 2695,
+    "reference_date": "2025-12-01"
+  },
+  "features": {
+    "numeric": [
+      "age",
+      "satisfaction_score",
+      "n_units",
+      "avg_price",
+      "office_share"
+    ],
+    "binary": [
+      "acquisition_purpose",
+      "loan_applied",
+      "client_type"
+    ],
+    "nominal": [
+      "country",
+      "referral_channel"
+    ]
+  },
+  "n_encoded_columns": 21,
+  "k_selection": {
+    "k": 6,
+    "elbow_k": 6,
+    "best_silhouette_k_unrestricted": 2,
+    "eligible_k": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "stable_k": [
+      3,
+      6
+    ],
+    "rationale": "Elbow method suggests K=6; the unrestricted silhouette peak is K=2 (a trivial 2-way split). Restricting to 3-6 segments (business limit), K values with silhouette within 0.01 of the best (0.124): [3, 4, 5, 6]. Of these, K values with stability ARI >= 0.6: [3, 6]. K=6 has the lowest Davies-Bouldin index (1.696) among them (silhouette=0.123, stability ARI=0.68).",
+    "k_min": 3,
+    "k_max": 6,
+    "sil_tolerance": 0.01,
+    "min_stability": 0.6
+  },
+  "k_sweep": [
+    {
+      "k": 2,
+      "inertia": 11295.750832080894,
+      "silhouette": 0.1327934011965904,
+      "davies_bouldin": 2.5274415726226724,
+      "calinski_harabasz": 286.66522868988017,
+      "stability_ari": 0.21202905967652336,
+      "smallest_cluster_pct": 44.85
+    },
+    {
+      "k": 3,
+      "inertia": 10290.394404210308,
+      "silhouette": 0.11708859115011859,
+      "davies_bouldin": 2.2631456383787536,
+      "calinski_harabasz": 254.80923790668388,
+      "stability_ari": 0.769180717766766,
+      "smallest_cluster_pct": 27.7
+    },
+    {
+      "k": 4,
+      "inertia": 9389.279107509517,
+      "silhouette": 0.12382255915888746,
+      "davies_bouldin": 1.8738130364806975,
+      "calinski_harabasz": 249.9366613346737,
+      "stability_ari": 0.4309648528728057,
+      "smallest_cluster_pct": 2.5
+    },
+    {
+      "k": 5,
+      "inertia": 8679.020052466352,
+      "silhouette": 0.12425673986561801,
+      "davies_bouldin": 1.7856274836338066,
+      "calinski_harabasz": 243.50718281631865,
+      "stability_ari": 0.3910197145196723,
+      "smallest_cluster_pct": 2.55
+    },
+    {
+      "k": 6,
+      "inertia": 8086.892787881141,
+      "silhouette": 0.12268834900435616,
+      "davies_bouldin": 1.6957067648025141,
+      "calinski_harabasz": 238.16512738728133,
+      "stability_ari": 0.6843190523229963,
+      "smallest_cluster_pct": 2.55
+    },
+    {
+      "k": 7,
+      "inertia": 7694.180897773196,
+      "silhouette": 0.12138860275558422,
+      "davies_bouldin": 1.770275158009301,
+      "calinski_harabasz": 225.45013047349968,
+      "stability_ari": 0.679211394594753,
+      "smallest_cluster_pct": 2.55
+    },
+    {
+      "k": 8,
+      "inertia": 7363.983280357844,
+      "silhouette": 0.11750973588587833,
+      "davies_bouldin": 1.7500463496060406,
+      "calinski_harabasz": 214.56663788835547,
+      "stability_ari": 0.7456412927977393,
+      "smallest_cluster_pct": 2.55
+    },
+    {
+      "k": 9,
+      "inertia": 7082.283927819621,
+      "silhouette": 0.12017157121893751,
+      "davies_bouldin": 1.789271821328395,
+      "calinski_harabasz": 205.01449513136097,
+      "stability_ari": 0.7111174354681008,
+      "smallest_cluster_pct": 2.5
+    },
+    {
+      "k": 10,
+      "inertia": 6861.404237570232,
+      "silhouette": 0.12055554509816155,
+      "davies_bouldin": 1.7928700188839433,
+      "calinski_harabasz": 195.12499741763565,
+      "stability_ari": 0.6431846435228362,
+      "smallest_cluster_pct": 2.35
+    }
+  ],
+  "kmeans_final": {
+    "k": 6,
+    "inertia": 8085.340070570669,
+    "silhouette": 0.12268834900435616,
+    "sizes": {
+      "C1": 437,
+      "C2": 415,
+      "C3": 397,
+      "C4": 387,
+      "C5": 313,
+      "C6": 51
+    }
+  },
+  "hierarchical": {
+    "agreement": {
+      "ARI": 0.24545775406398657,
+      "NMI": 0.3608071244510222,
+      "cophenetic_correlation_ward": 0.3417028841691925,
+      "silhouette_ward": 0.09040266046356119,
+      "silhouette_kmeans": 0.1225929579584552,
+      "davies_bouldin_ward": 2.2067808620628178,
+      "davies_bouldin_kmeans": 1.6946939104075902
+    },
+    "linkage_comparison": [
+      {
+        "linkage": "ward",
+        "silhouette": 0.09040266046356119,
+        "davies_bouldin": 2.2067808620628178,
+        "smallest_cluster_pct": 2.0,
+        "ARI_vs_kmeans": 0.24545775406398657
+      },
+      {
+        "linkage": "average",
+        "silhouette": 0.18169701698200869,
+        "davies_bouldin": 1.0534379356904797,
+        "smallest_cluster_pct": 0.05,
+        "ARI_vs_kmeans": 0.01724283960210315
+      },
+      {
+        "linkage": "complete",
+        "silhouette": 0.06152927535027439,
+        "davies_bouldin": 2.0015220581299666,
+        "smallest_cluster_pct": 0.15,
+        "ARI_vs_kmeans": 0.13988014843397734
+      }
+    ],
+    "ward_sweep": [
+      {
+        "k": 2,
+        "silhouette": 0.12092293706703698,
+        "davies_bouldin": 2.6741850326830874
+      },
+      {
+        "k": 3,
+        "silhouette": 0.128552747978057,
+        "davies_bouldin": 2.055484377366397
+      },
+      {
+        "k": 4,
+        "silhouette": 0.08924738788309625,
+        "davies_bouldin": 2.094771819369952
+      },
+      {
+        "k": 5,
+        "silhouette": 0.08776941782992126,
+        "davies_bouldin": 2.310637251321391
+      },
+      {
+        "k": 6,
+        "silhouette": 0.09040266046356119,
+        "davies_bouldin": 2.2067808620628178
+      },
+      {
+        "k": 7,
+        "silhouette": 0.07266814233075511,
+        "davies_bouldin": 2.154746684742715
+      },
+      {
+        "k": 8,
+        "silhouette": 0.06390496792623293,
+        "davies_bouldin": 2.1516971072362603
+      },
+      {
+        "k": 9,
+        "silhouette": 0.06184358939717325,
+        "davies_bouldin": 2.088309628579582
+      },
+      {
+        "k": 10,
+        "silhouette": 0.06740603748153563,
+        "davies_bouldin": 2.116753823257395
+      }
+    ],
+    "contingency_kmeans_vs_ward": {
+      "0": {
+        "0": 0,
+        "1": 156,
+        "2": 264,
+        "3": 34,
+        "4": 112,
+        "5": 0
+      },
+      "1": {
+        "0": 5,
+        "1": 229,
+        "2": 12,
+        "3": 214,
+        "4": 31,
+        "5": 0
+      },
+      "2": {
+        "0": 37,
+        "1": 0,
+        "2": 18,
+        "3": 0,
+        "4": 104,
+        "5": 0
+      },
+      "3": {
+        "0": 204,
+        "1": 29,
+        "2": 102,
+        "3": 22,
+        "4": 15,
+        "5": 11
+      },
+      "4": {
+        "0": 191,
+        "1": 1,
+        "2": 1,
+        "3": 117,
+        "4": 51,
+        "5": 0
+      },
+      "5": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 40
+      }
+    }
+  },
+  "pca_explained_variance": [
+    0.1835832361669359,
+    0.15976309169604513
+  ],
+  "cluster_profiles": {
+    "0": {
+      "size": 437,
+      "pct_of_clients": 0.2185,
+      "avg_age": 65.88540183598896,
+      "median_age": 67.30458590006845,
+      "pct_female": 0.5011441647597255,
+      "pct_company": 0.02517162471395881,
+      "investment_rate": 0.3112128146453089,
+      "home_rate": 0.6887871853546911,
+      "loan_rate": 0.34782608695652173,
+      "avg_satisfaction": 2.860411899313501,
+      "pct_international": 0.2334096109839817,
+      "top_country": "USA",
+      "top_country_pct": 0.7665903890160183,
+      "top_region": "California",
+      "top_region_pct": 0.2951945080091533,
+      "top_channel": "Website",
+      "top_channel_pct": 0.5835240274599542,
+      "avg_units": 3.5812356979405036,
+      "avg_price": 331202.19923455385,
+      "avg_total_spend": 1185038.9740732268,
+      "avg_area": 1091.820941266209,
+      "office_share": 0.3756674294431731,
+      "avg_price_per_sqft": 303.7895907771596,
+      "total_spend": 517862031.6700001,
+      "revenue_share": 0.2054395851533984,
+      "value_index": 0.9402269343404962
+    },
+    "1": {
+      "size": 415,
+      "pct_of_clients": 0.2075,
+      "avg_age": 72.37080395503988,
+      "median_age": 72.95277207392198,
+      "pct_female": 0.4963855421686747,
+      "pct_company": 0.021686746987951807,
+      "investment_rate": 0.28433734939759037,
+      "home_rate": 0.7156626506024096,
+      "loan_rate": 0.3373493975903614,
+      "avg_satisfaction": 2.7493975903614456,
+      "pct_international": 0.21686746987951808,
+      "top_country": "USA",
+      "top_country_pct": 0.7831325301204819,
+      "top_region": "California",
+      "top_region_pct": 0.3228915662650602,
+      "top_channel": "Website",
+      "top_channel_pct": 0.5469879518072289,
+      "avg_units": 3.563855421686747,
+      "avg_price": 343253.4840550201,
+      "avg_total_spend": 1223962.8017831326,
+      "avg_area": 1142.920973493976,
+      "office_share": 0.0004819277108433735,
+      "avg_price_per_sqft": 300.54890979412465,
+      "total_spend": 507944562.74,
+      "revenue_share": 0.2015052540417303,
+      "value_index": 0.9711096580324353
+    },
+    "2": {
+      "size": 397,
+      "pct_of_clients": 0.1985,
+      "avg_age": 46.33440743978195,
+      "median_age": 47.27446954140999,
+      "pct_female": 0.5113350125944585,
+      "pct_company": 0.06801007556675064,
+      "investment_rate": 0.2770780856423174,
+      "home_rate": 0.7229219143576826,
+      "loan_rate": 0.4156171284634761,
+      "avg_satisfaction": 4.531486146095718,
+      "pct_international": 0.2518891687657431,
+      "top_country": "USA",
+      "top_country_pct": 0.7481108312342569,
+      "top_region": "California",
+      "top_region_pct": 0.3224181360201511,
+      "top_channel": "Website",
+      "top_channel_pct": 0.4987405541561713,
+      "avg_units": 3.6876574307304786,
+      "avg_price": 311772.76170906797,
+      "avg_total_spend": 1151406.587531486,
+      "avg_area": 1044.0883719563392,
+      "office_share": 0.07418136020151132,
+      "avg_price_per_sqft": 299.5715474002677,
+      "total_spend": 457108415.25,
+      "revenue_share": 0.18133818943291244,
+      "value_index": 0.9135425160348233
+    },
+    "3": {
+      "size": 387,
+      "pct_of_clients": 0.1935,
+      "avg_age": 40.014403783469255,
+      "median_age": 38.6611909650924,
+      "pct_female": 0.48320413436692505,
+      "pct_company": 0.08527131782945736,
+      "investment_rate": 0.32558139534883723,
+      "home_rate": 0.6744186046511628,
+      "loan_rate": 0.3669250645994832,
+      "avg_satisfaction": 1.6666666666666667,
+      "pct_international": 0.21963824289405684,
+      "top_country": "USA",
+      "top_country_pct": 0.7803617571059431,
+      "top_region": "California",
+      "top_region_pct": 0.31007751937984496,
+      "top_channel": "Website",
+      "top_channel_pct": 0.5529715762273901,
+      "avg_units": 3.5968992248062017,
+      "avg_price": 322880.4866300603,
+      "avg_total_spend": 1160604.7208010338,
+      "avg_area": 1075.2031541774331,
+      "office_share": 0.10327304048234281,
+      "avg_price_per_sqft": 300.9914399359964,
+      "total_spend": 449154026.95000005,
+      "revenue_share": 0.1781826264980681,
+      "value_index": 0.9208404470184397
+    },
+    "4": {
+      "size": 313,
+      "pct_of_clients": 0.1565,
+      "avg_age": 48.092159731288255,
+      "median_age": 47.68788501026694,
+      "pct_female": 0.49201277955271566,
+      "pct_company": 0.0670926517571885,
+      "investment_rate": 0.34185303514376997,
+      "home_rate": 0.65814696485623,
+      "loan_rate": 0.3865814696485623,
+      "avg_satisfaction": 3.3386581469648564,
+      "pct_international": 0.24920127795527156,
+      "top_country": "USA",
+      "top_country_pct": 0.7507987220447284,
+      "top_region": "California",
+      "top_region_pct": 0.31309904153354634,
+      "top_channel": "Website",
+      "top_channel_pct": 0.5527156549520766,
+      "avg_units": 3.3003194888178915,
+      "avg_price": 451714.710772098,
+      "avg_total_spend": 1490099.8781789138,
+      "avg_area": 1460.304392971246,
+      "office_share": 0.18077742279020234,
+      "avg_price_per_sqft": 309.0906382270175,
+      "total_spend": 466401261.87,
+      "revenue_share": 0.18502472839069323,
+      "value_index": 1.1822666350843019
+    },
+    "5": {
+      "size": 51,
+      "pct_of_clients": 0.0255,
+      "avg_age": 64.2500033552093,
+      "median_age": 66.94866529774127,
+      "pct_female": 0.37254901960784315,
+      "pct_company": 0.0392156862745098,
+      "investment_rate": 0.35294117647058826,
+      "home_rate": 0.6470588235294117,
+      "loan_rate": 0.3137254901960784,
+      "avg_satisfaction": 3.4901960784313726,
+      "pct_international": 0.13725490196078433,
+      "top_country": "USA",
+      "top_country_pct": 0.8627450980392157,
+      "top_region": "California",
+      "top_region_pct": 0.47058823529411764,
+      "top_channel": "Website",
+      "top_channel_pct": 0.7058823529411765,
+      "avg_units": 7.294117647058823,
+      "avg_price": 330963.050861301,
+      "avg_total_spend": 2397660.0462745097,
+      "avg_area": 1094.890221999134,
+      "office_share": 0.13874883286647993,
+      "avg_price_per_sqft": 301.4889865319719,
+      "total_spend": 122280662.36,
+      "revenue_share": 0.048509616483197494,
+      "value_index": 1.9023379013018626
+    },
+    "All": {
+      "size": 2000,
+      "pct_of_clients": 1.0,
+      "avg_age": 55.51786721423682,
+      "median_age": 56.10130047912389,
+      "pct_female": 0.494,
+      "pct_company": 0.0515,
+      "investment_rate": 0.3075,
+      "home_rate": 0.6925,
+      "loan_rate": 0.368,
+      "avg_satisfaction": 3.029,
+      "pct_international": 0.231,
+      "top_country": "USA",
+      "top_country_pct": 0.769,
+      "top_region": "California",
+      "top_region_pct": 0.3165,
+      "top_channel": "Website",
+      "top_channel_pct": 0.5515,
+      "avg_units": 3.6525,
+      "avg_price": 347089.95586912986,
+      "avg_total_spend": 1260375.4804200002,
+      "avg_area": 1147.479667994311,
+      "office_share": 0.14872142857142856,
+      "avg_price_per_sqft": 302.5093741927522,
+      "total_spend": 2520750960.84,
+      "revenue_share": 1.0,
+      "value_index": 1.0
+    }
+  },
+  "cluster_names": {
+    "0": "Office-Focused Senior Buyers",
+    "1": "Senior Buyers",
+    "2": "Highly Satisfied Younger Buyers",
+    "3": "Dissatisfied Younger Buyers",
+    "4": "Premium-Ticket Younger Buyers",
+    "5": "High-Volume Senior Buyers"
+  },
+  "trait_effects": {
+    "0": {
+      "n_units": -0.08486875257907549,
+      "avg_price": -0.227873515367443,
+      "office_share": 1.2282301841561896,
+      "satisfaction_score": -0.1192647209205051,
+      "age": 0.5975786272237649,
+      "is_investment": 0.008043817687858825,
+      "loan_flag": -0.04182145086969991,
+      "is_company": -0.11909490350713553,
+      "is_international": 0.005715696679467371
+    },
+    "1": {
+      "n_units": -0.10556694680126227,
+      "avg_price": -0.05502540975399502,
+      "office_share": -0.8022711514714631,
+      "satisfaction_score": -0.1977998638009061,
+      "age": 0.97139340929985,
+      "is_investment": -0.05018191221820446,
+      "loan_flag": -0.0635401104405869,
+      "is_company": -0.13485854907978928,
+      "is_international": -0.03352294458279467
+    },
+    "2": {
+      "n_units": 0.04186903125059629,
+      "avg_price": -0.5065443392211515,
+      "office_share": -0.40341033351249916,
+      "satisfaction_score": 1.0629077032800422,
+      "age": -0.529329246093799,
+      "is_investment": -0.06590911644836302,
+      "loan_flag": 0.09871250036121434,
+      "is_company": 0.0746823848853355,
+      "is_international": 0.049549970242042565
+    },
+    "3": {
+      "n_units": -0.06621503749784433,
+      "avg_price": -0.34722944135995293,
+      "office_share": -0.24596636141566683,
+      "satisfaction_score": -0.9637590324529545,
+      "age": -0.8936105575894567,
+      "is_investment": 0.039173366198582096,
+      "loan_flag": -0.002228390592540346,
+      "is_company": 0.1527626294639007,
+      "is_international": -0.026950556664564043
+    },
+    "4": {
+      "n_units": -0.41941224151375545,
+      "avg_price": 1.5006027120475542,
+      "office_share": 0.17348681858855447,
+      "satisfaction_score": 0.2190622726523305,
+      "age": -0.4280134328671965,
+      "is_investment": 0.07442589467002618,
+      "loan_flag": 0.038520242370400644,
+      "is_company": 0.07053247062409054,
+      "is_international": 0.04317418233174819
+    },
+    "5": {
+      "n_units": 4.336807323501272,
+      "avg_price": -0.23130355157462554,
+      "office_share": -0.05397161885274389,
+      "satisfaction_score": 0.3262651477759604,
+      "age": 0.5033152160307405,
+      "is_investment": 0.09844836706649514,
+      "loan_flag": -0.11251355849258683,
+      "is_company": -0.05556739228661367,
+      "is_international": -0.22236724066292768
+    }
+  },
+  "prd_segment_test": [
+    {
+      "prd_segment": "Global Investors",
+      "prd_description": "High income, investment purchases (international)",
+      "closest_cluster": 4,
+      "closest_cluster_name": "Premium-Ticket Younger Buyers",
+      "conditions_met": "0/2",
+      "supported_by_data": false,
+      "evidence": "investment_rate: 0.342 vs 0.307 overall (x1.11, need >= 1.25) -> no | pct_international: 0.249 vs 0.231 overall (x1.08, need >= 1.25) -> no",
+      "limitation": "income is not in the data"
+    },
+    {
+      "prd_segment": "First-Time Buyers",
+      "prd_description": "Younger, loan dependent",
+      "closest_cluster": 2,
+      "closest_cluster_name": "Highly Satisfied Younger Buyers",
+      "conditions_met": "1/3",
+      "supported_by_data": false,
+      "evidence": "avg_age: 46.3 vs 55.5 overall (x0.83, need <= 0.85) -> OK | loan_rate: 0.416 vs 0.368 overall (x1.13, need >= 1.25) -> no | investment_rate: 0.277 vs 0.307 overall (x0.90, need <= 0.9) -> no",
+      "limitation": "'first-time' cannot be observed (every client owns 3+ units); personal-use + young + loans used as proxy"
+    },
+    {
+      "prd_segment": "Corporate Buyers",
+      "prd_description": "Companies purchasing multiple units",
+      "closest_cluster": 5,
+      "closest_cluster_name": "High-Volume Senior Buyers",
+      "conditions_met": "1/2",
+      "supported_by_data": false,
+      "evidence": "pct_company: 0.0392 vs 0.0515 overall (x0.76, need >= 1.25) -> no | avg_units: 7.29 vs 3.65 overall (x2.00, need >= 1.25) -> OK",
+      "limitation": ""
+    },
+    {
+      "prd_segment": "Luxury Investors",
+      "prd_description": "High satisfaction, large investments",
+      "closest_cluster": 4,
+      "closest_cluster_name": "Premium-Ticket Younger Buyers",
+      "conditions_met": "2/3",
+      "supported_by_data": false,
+      "evidence": "avg_price: 4.52e+05 vs 3.47e+05 overall (x1.30, need >= 1.25) -> OK | avg_satisfaction: 3.34 vs 3.03 overall (x1.10, need >= 1.1) -> OK | investment_rate: 0.342 vs 0.307 overall (x1.11, need >= 1.25) -> no",
+      "limitation": ""
+    }
+  ],
+  "statistical_tests": [
+    {
+      "variable": "acquisition_purpose",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 5.6226641643159345,
+      "p_value": 0.34468268835538995,
+      "effect_size": 0.053021996210610246,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": false,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "loan_applied",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 7.423947097960953,
+      "p_value": 0.19097117348953624,
+      "effect_size": 0.06092596777221086,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": false,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "client_type",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 26.719166857622948,
+      "p_value": 6.469278683011937e-05,
+      "effect_size": 0.11558366419529827,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "referral_channel",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 15.395942492273862,
+      "p_value": 0.11827942740427533,
+      "effect_size": 0.06204019360921165,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": false,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "country",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 37.60012034224056,
+      "p_value": 0.7751910214408442,
+      "effect_size": 0.061318936995222416,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": false,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "gender",
+      "type": "categorical",
+      "test": "chi-square",
+      "statistic": 3.770838505081257,
+      "p_value": 0.5828583254882744,
+      "effect_size": 0.04342141467686916,
+      "effect_size_name": "Cramer's V",
+      "significant_0.05": false,
+      "used_as_model_input": false
+    },
+    {
+      "variable": "age",
+      "type": "numeric",
+      "test": "Kruskal-Wallis",
+      "statistic": 1052.6909302489871,
+      "p_value": 2.3473407091990512e-225,
+      "effect_size": 0.5193491181244166,
+      "effect_size_name": "eta-squared",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "satisfaction_score",
+      "type": "numeric",
+      "test": "Kruskal-Wallis",
+      "statistic": 854.9180242022582,
+      "p_value": 1.5175339455651754e-182,
+      "effect_size": 0.425652581269078,
+      "effect_size_name": "eta-squared",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "n_units",
+      "type": "numeric",
+      "test": "Kruskal-Wallis",
+      "statistic": 271.11647627215154,
+      "p_value": 1.6112189859198174e-56,
+      "effect_size": 0.5124696261059455,
+      "effect_size_name": "eta-squared",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "avg_price",
+      "type": "numeric",
+      "test": "Kruskal-Wallis",
+      "statistic": 735.8382253342188,
+      "p_value": 8.740198796657405e-157,
+      "effect_size": 0.44022911729588643,
+      "effect_size_name": "eta-squared",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    },
+    {
+      "variable": "office_share",
+      "type": "numeric",
+      "test": "Kruskal-Wallis",
+      "statistic": 1049.0361298312637,
+      "p_value": 1.4519264358289602e-224,
+      "effect_size": 0.5122243249823127,
+      "effect_size_name": "eta-squared",
+      "significant_0.05": true,
+      "used_as_model_input": true
+    }
+  ],
+  "outliers": {
+    "sale_price_usd": {
+      "lower_bound": -92844.75624999998,
+      "upper_bound": 773870.97375,
+      "n_outliers": 0,
+      "pct_outliers": 0.0,
+      "min": 97402.8,
+      "max": 736652.27
+    },
+    "floor_area_sqft": {
+      "lower_bound": -292.9999999999998,
+      "upper_bound": 2574.2,
+      "n_outliers": 0,
+      "pct_outliers": 0.0,
+      "min": 410.71,
+      "max": 1957.16
+    },
+    "price_per_sqft": {
+      "lower_bound": 222.18788046670292,
+      "upper_bound": 381.37120711057025,
+      "n_outliers": 94,
+      "pct_outliers": 0.94,
+      "min": 219.99999999999997,
+      "max": 436.88891639965044
+    }
+  },
+  "feature_correlations": {
+    "age": {
+      "age": 1.0,
+      "satisfaction_score": 0.004,
+      "n_units": 0.083,
+      "avg_price": -0.015,
+      "avg_area": -0.011,
+      "total_spend": 0.057,
+      "office_share": 0.014,
+      "avg_price_per_sqft": -0.007
+    },
+    "satisfaction_score": {
+      "age": 0.004,
+      "satisfaction_score": 1.0,
+      "n_units": 0.07,
+      "avg_price": -0.003,
+      "avg_area": 0.0,
+      "total_spend": 0.049,
+      "office_share": -0.011,
+      "avg_price_per_sqft": -0.017
+    },
+    "n_units": {
+      "age": 0.083,
+      "satisfaction_score": 0.07,
+      "n_units": 1.0,
+      "avg_price": -0.126,
+      "avg_area": -0.125,
+      "total_spend": 0.71,
+      "office_share": -0.021,
+      "avg_price_per_sqft": -0.027
+    },
+    "avg_price": {
+      "age": -0.015,
+      "satisfaction_score": -0.003,
+      "n_units": -0.126,
+      "avg_price": 1.0,
+      "avg_area": 0.959,
+      "total_spend": 0.596,
+      "office_share": 0.056,
+      "avg_price_per_sqft": 0.27
+    },
+    "avg_area": {
+      "age": -0.011,
+      "satisfaction_score": 0.0,
+      "n_units": -0.125,
+      "avg_price": 0.959,
+      "avg_area": 1.0,
+      "total_spend": 0.569,
+      "office_share": 0.029,
+      "avg_price_per_sqft": 0.003
+    },
+    "total_spend": {
+      "age": 0.057,
+      "satisfaction_score": 0.049,
+      "n_units": 0.71,
+      "avg_price": 0.596,
+      "avg_area": 0.569,
+      "total_spend": 1.0,
+      "office_share": 0.017,
+      "avg_price_per_sqft": 0.165
+    },
+    "office_share": {
+      "age": 0.014,
+      "satisfaction_score": -0.011,
+      "n_units": -0.021,
+      "avg_price": 0.056,
+      "avg_area": 0.029,
+      "total_spend": 0.017,
+      "office_share": 1.0,
+      "avg_price_per_sqft": 0.107
+    },
+    "avg_price_per_sqft": {
+      "age": -0.007,
+      "satisfaction_score": -0.017,
+      "n_units": -0.027,
+      "avg_price": 0.27,
+      "avg_area": 0.003,
+      "total_spend": 0.165,
+      "office_share": 0.107,
+      "avg_price_per_sqft": 1.0
+    }
+  }
+}

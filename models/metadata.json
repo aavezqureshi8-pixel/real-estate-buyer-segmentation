@@ -1,0 +1,111 @@
+{
+  "k": 6,
+  "feature_config": {
+    "numeric": [
+      "age",
+      "satisfaction_score",
+      "n_units",
+      "avg_price",
+      "office_share"
+    ],
+    "binary": [
+      "acquisition_purpose",
+      "loan_applied",
+      "client_type"
+    ],
+    "nominal": [
+      "country",
+      "referral_channel"
+    ]
+  },
+  "feature_names": [
+    "age",
+    "satisfaction_score",
+    "n_units",
+    "avg_price",
+    "office_share",
+    "acquisition_purpose",
+    "loan_applied",
+    "client_type",
+    "country_Australia",
+    "country_Belgium",
+    "country_Canada",
+    "country_Denmark",
+    "country_France",
+    "country_Germany",
+    "country_Mexico",
+    "country_Russia",
+    "country_UK",
+    "country_USA",
+    "referral_channel_Agency",
+    "referral_channel_Client",
+    "referral_channel_Website"
+  ],
+  "cluster_names": {
+    "0": "Office-Focused Senior Buyers",
+    "1": "Senior Buyers",
+    "2": "Highly Satisfied Younger Buyers",
+    "3": "Dissatisfied Younger Buyers",
+    "4": "Premium-Ticket Younger Buyers",
+    "5": "High-Volume Senior Buyers"
+  },
+  "categories": {
+    "acquisition_purpose": [
+      "Home",
+      "Investment"
+    ],
+    "loan_applied": [
+      "No",
+      "Yes"
+    ],
+    "client_type": [
+      "Company",
+      "Individual"
+    ],
+    "country": [
+      "Australia",
+      "Belgium",
+      "Canada",
+      "Denmark",
+      "France",
+      "Germany",
+      "Mexico",
+      "Russia",
+      "UK",
+      "USA"
+    ],
+    "referral_channel": [
+      "Agency",
+      "Client",
+      "Website"
+    ]
+  },
+  "numeric_ranges": {
+    "age": [
+      24.95003422313484,
+      94.79808350444901,
+      56.10130047912389
+    ],
+    "satisfaction_score": [
+      1.0,
+      5.0,
+      3.0
+    ],
+    "n_units": [
+      3.0,
+      13.0,
+      4.0
+    ],
+    "avg_price": [
+      154537.31666666668,
+      563423.5,
+      341523.3833333333
+    ],
+    "office_share": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "reference_date": "2025-12-01"
+}

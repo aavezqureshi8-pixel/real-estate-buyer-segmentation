@@ -1,0 +1,384 @@
+{
+  "insights": [
+    {
+      "cluster": 0,
+      "cluster_id": "C1",
+      "name": "Office-Focused Senior Buyers",
+      "size": 437,
+      "pct": 21.85,
+      "headline": "Office-Focused Senior Buyers - 437 clients (21.9%)",
+      "customer_profile": "Office-Focused Senior Buyers: average age 66, 50% female, 2.5% companies, 23% international.",
+      "behavioral_profile": "Average satisfaction 2.86/5 (below the overall 3.03); owns 3.6 units on average; most common channel is Website (58%).",
+      "investment_profile": "31.1% buy for investment (lift 1.01x vs overall); this cluster holds 20.4% of all investor spend (136 investors, rank 2 of 6). Average unit price $331,202.",
+      "financing_profile": "34.8% applied for a loan (in line with the overall 36.8%).",
+      "geographic_profile": "USA is the main country (77% of the cluster); main region California (30%).",
+      "marketing_recommendations": [
+        "Advisor-led, relationship-based outreach (events, phone/in-person) for an older audience."
+      ],
+      "property_recommendations": [
+        "Office / commercial units: 38% of their purchases are offices (overall 15%).",
+        "Geography does not set this segment apart (country mix is close to the overall mix), so use the standard regional inventory."
+      ],
+      "data_supported_findings": [
+        "437 clients (21.9% of all buyers) generating 20.5% of total sold value (value index 0.94).",
+        "Average age 65.9 years (overall 55.5); 2.5% are companies (overall 5.1%).",
+        "Investment purpose 31.1% (overall 30.8%) - in line with average.",
+        "Loan applied 34.8% (overall 36.8%) - in line with average.",
+        "Average satisfaction 2.86/5 (overall 3.03).",
+        "Owns 3.58 units on average (overall 3.65); average unit price $331,202 (overall $347,090); 37.6% of their units are offices (overall 14.9%).",
+        "Geography: 23.3% live outside the USA (overall 23.1%); top countries {'USA': 76.7, 'UK': 5.5, 'Canada': 4.6}; top regions {'California': 29.5, 'Arizona': 7.1, 'Colorado': 6.9}.",
+        "Referral channels: {'Website': 58.4, 'Agency': 32.0, 'Client': 9.6}."
+      ],
+      "assumptions": [
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "office_share": 1.2282301841561896,
+        "age": 0.5975786272237649,
+        "avg_price": -0.227873515367443,
+        "satisfaction_score": -0.1192647209205051
+      }
+    },
+    {
+      "cluster": 1,
+      "cluster_id": "C2",
+      "name": "Senior Buyers",
+      "size": 415,
+      "pct": 20.75,
+      "headline": "Senior Buyers - 415 clients (20.8%)",
+      "customer_profile": "Senior Buyers: average age 72, 50% female, 2.2% companies, 22% international.",
+      "behavioral_profile": "Average satisfaction 2.75/5 (below the overall 3.03); owns 3.6 units on average; most common channel is Website (55%).",
+      "investment_profile": "28.4% buy for investment (lift 0.92x vs overall); this cluster holds 17.9% of all investor spend (118 investors, rank 4 of 6). Average unit price $343,253.",
+      "financing_profile": "33.7% applied for a loan (in line with the overall 36.8%).",
+      "geographic_profile": "USA is the main country (78% of the cluster); main region California (32%).",
+      "marketing_recommendations": [
+        "Advisor-led, relationship-based outreach (events, phone/in-person) for an older audience."
+      ],
+      "property_recommendations": [
+        "Residential apartments: this cluster essentially buys no offices.",
+        "Geography does not set this segment apart (country mix is close to the overall mix), so use the standard regional inventory."
+      ],
+      "data_supported_findings": [
+        "415 clients (20.8% of all buyers) generating 20.2% of total sold value (value index 0.97).",
+        "Average age 72.4 years (overall 55.5); 2.2% are companies (overall 5.1%).",
+        "Investment purpose 28.4% (overall 30.8%) - in line with average.",
+        "Loan applied 33.7% (overall 36.8%) - in line with average.",
+        "Average satisfaction 2.75/5 (overall 3.03).",
+        "Owns 3.56 units on average (overall 3.65); average unit price $343,253 (overall $347,090); 0.0% of their units are offices (overall 14.9%).",
+        "Geography: 21.7% live outside the USA (overall 23.1%); top countries {'USA': 78.3, 'UK': 4.8, 'Canada': 4.1}; top regions {'California': 32.3, 'Nevada': 8.0, 'Utah': 6.3}.",
+        "Referral channels: {'Website': 54.7, 'Agency': 36.6, 'Client': 8.7}."
+      ],
+      "assumptions": [
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "age": 0.97139340929985,
+        "office_share": -0.8022711514714631,
+        "satisfaction_score": -0.1977998638009061,
+        "is_company": -0.13485854907978928
+      }
+    },
+    {
+      "cluster": 2,
+      "cluster_id": "C3",
+      "name": "Highly Satisfied Younger Buyers",
+      "size": 397,
+      "pct": 19.85,
+      "headline": "Highly Satisfied Younger Buyers - 397 clients (19.9%)",
+      "customer_profile": "Highly Satisfied Younger Buyers: average age 46, 51% female, 6.8% companies, 25% international.",
+      "behavioral_profile": "Average satisfaction 4.53/5 (above the overall 3.03); owns 3.7 units on average; most common channel is Website (50%).",
+      "investment_profile": "27.7% buy for investment (lift 0.90x vs overall); this cluster holds 16.5% of all investor spend (110 investors, rank 5 of 6). Average unit price $311,773.",
+      "financing_profile": "41.6% applied for a loan (above the overall 36.8%).",
+      "geographic_profile": "USA is the main country (75% of the cluster); main region California (32%).",
+      "marketing_recommendations": [
+        "Referral / ambassador programme and testimonials: these are the happiest buyers (4.53/5).",
+        "Digital-first campaigns (social media, online calculators, virtual tours) for a younger audience."
+      ],
+      "property_recommendations": [
+        "Value units: average price paid is $311,773 (overall $347,090) - lead with entry-price apartments.",
+        "Geography does not set this segment apart (country mix is close to the overall mix), so use the standard regional inventory."
+      ],
+      "data_supported_findings": [
+        "397 clients (19.9% of all buyers) generating 18.1% of total sold value (value index 0.91).",
+        "Average age 46.3 years (overall 55.5); 6.8% are companies (overall 5.1%).",
+        "Investment purpose 27.7% (overall 30.8%) - in line with average.",
+        "Loan applied 41.6% (overall 36.8%) - above average.",
+        "Average satisfaction 4.53/5 (overall 3.03).",
+        "Owns 3.69 units on average (overall 3.65); average unit price $311,773 (overall $347,090); 7.4% of their units are offices (overall 14.9%).",
+        "Geography: 25.2% live outside the USA (overall 23.1%); top countries {'USA': 74.8, 'Canada': 5.3, 'France': 4.0}; top regions {'California': 32.2, 'Nevada': 6.5, 'Colorado': 6.0}.",
+        "Referral channels: {'Website': 49.9, 'Agency': 39.8, 'Client': 10.3}."
+      ],
+      "assumptions": [
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "satisfaction_score": 1.0629077032800422,
+        "age": -0.529329246093799,
+        "avg_price": -0.5065443392211515,
+        "office_share": -0.40341033351249916
+      }
+    },
+    {
+      "cluster": 3,
+      "cluster_id": "C4",
+      "name": "Dissatisfied Younger Buyers",
+      "size": 387,
+      "pct": 19.35,
+      "headline": "Dissatisfied Younger Buyers - 387 clients (19.4%)",
+      "customer_profile": "Dissatisfied Younger Buyers: average age 40, 48% female, 8.5% companies, 22% international.",
+      "behavioral_profile": "Average satisfaction 1.67/5 (below the overall 3.03); owns 3.6 units on average; most common channel is Website (55%).",
+      "investment_profile": "32.6% buy for investment (lift 1.06x vs overall); this cluster holds 18.5% of all investor spend (126 investors, rank 3 of 6). Average unit price $322,880.",
+      "financing_profile": "36.7% applied for a loan (in line with the overall 36.8%).",
+      "geographic_profile": "USA is the main country (78% of the cluster); main region California (31%).",
+      "marketing_recommendations": [
+        "Service-recovery and retention programme (follow-up calls, post-sale support): satisfaction is only 1.67/5.",
+        "Digital-first campaigns (social media, online calculators, virtual tours) for a younger audience."
+      ],
+      "property_recommendations": [
+        "Geography does not set this segment apart (country mix is close to the overall mix), so use the standard regional inventory."
+      ],
+      "data_supported_findings": [
+        "387 clients (19.4% of all buyers) generating 17.8% of total sold value (value index 0.92).",
+        "Average age 40.0 years (overall 55.5); 8.5% are companies (overall 5.1%).",
+        "Investment purpose 32.6% (overall 30.8%) - in line with average.",
+        "Loan applied 36.7% (overall 36.8%) - in line with average.",
+        "Average satisfaction 1.67/5 (overall 3.03).",
+        "Owns 3.60 units on average (overall 3.65); average unit price $322,880 (overall $347,090); 10.3% of their units are offices (overall 14.9%).",
+        "Geography: 22.0% live outside the USA (overall 23.1%); top countries {'USA': 78.0, 'UK': 4.7, 'Belgium': 3.1}; top regions {'California': 31.0, 'Nevada': 8.5, 'Oregon': 6.7}.",
+        "Referral channels: {'Website': 55.3, 'Agency': 33.1, 'Client': 11.6}."
+      ],
+      "assumptions": [
+        "The reason for low satisfaction is not in the data (could be price, service or delivery).",
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "satisfaction_score": -0.9637590324529545,
+        "age": -0.8936105575894567,
+        "avg_price": -0.34722944135995293,
+        "office_share": -0.24596636141566683
+      }
+    },
+    {
+      "cluster": 4,
+      "cluster_id": "C5",
+      "name": "Premium-Ticket Younger Buyers",
+      "size": 313,
+      "pct": 15.65,
+      "headline": "Premium-Ticket Younger Buyers - 313 clients (15.7%)",
+      "customer_profile": "Premium-Ticket Younger Buyers: average age 48, 49% female, 6.7% companies, 25% international.",
+      "behavioral_profile": "Average satisfaction 3.34/5 (above the overall 3.03); owns 3.3 units on average; most common channel is Website (55%).",
+      "investment_profile": "34.2% buy for investment (lift 1.11x vs overall); this cluster holds 20.8% of all investor spend (107 investors, rank 1 of 6). Average unit price $451,715.",
+      "financing_profile": "38.7% applied for a loan (in line with the overall 36.8%).",
+      "geographic_profile": "USA is the main country (75% of the cluster); main region California (31%).",
+      "marketing_recommendations": [
+        "Premium positioning: private viewings and a dedicated advisor for high-ticket buyers (they pay $451,715 per unit on average).",
+        "Digital-first campaigns (social media, online calculators, virtual tours) for a younger audience."
+      ],
+      "property_recommendations": [
+        "Premium units: this cluster pays $451,715 per unit on average (overall $347,090) - show the upper price band first.",
+        "Geography does not set this segment apart (country mix is close to the overall mix), so use the standard regional inventory."
+      ],
+      "data_supported_findings": [
+        "313 clients (15.7% of all buyers) generating 18.5% of total sold value (value index 1.18).",
+        "Average age 48.1 years (overall 55.5); 6.7% are companies (overall 5.1%).",
+        "Investment purpose 34.2% (overall 30.8%) - above average.",
+        "Loan applied 38.7% (overall 36.8%) - in line with average.",
+        "Average satisfaction 3.34/5 (overall 3.03).",
+        "Owns 3.30 units on average (overall 3.65); average unit price $451,715 (overall $347,090); 18.1% of their units are offices (overall 14.9%).",
+        "Geography: 24.9% live outside the USA (overall 23.1%); top countries {'USA': 75.1, 'UK': 5.8, 'Canada': 4.5}; top regions {'California': 31.3, 'Nevada': 7.3, 'Arizona': 6.7}.",
+        "Referral channels: {'Website': 55.3, 'Agency': 36.4, 'Client': 8.3}."
+      ],
+      "assumptions": [
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "avg_price": 1.5006027120475542,
+        "age": -0.4280134328671965,
+        "n_units": -0.41941224151375545,
+        "satisfaction_score": 0.2190622726523305
+      }
+    },
+    {
+      "cluster": 5,
+      "cluster_id": "C6",
+      "name": "High-Volume Senior Buyers",
+      "size": 51,
+      "pct": 2.55,
+      "headline": "High-Volume Senior Buyers - 51 clients (2.5%)",
+      "customer_profile": "High-Volume Senior Buyers: average age 64, 37% female, 3.9% companies, 14% international.",
+      "behavioral_profile": "Average satisfaction 3.49/5 (above the overall 3.03); owns 7.3 units on average; most common channel is Website (71%).",
+      "investment_profile": "35.3% buy for investment (lift 1.15x vs overall); this cluster holds 5.9% of all investor spend (18 investors, rank 6 of 6). Average unit price $330,963.",
+      "financing_profile": "31.4% applied for a loan (below the overall 36.8%).",
+      "geographic_profile": "USA is the main country (86% of the cluster); main region California (47%).",
+      "marketing_recommendations": [
+        "Dedicated relationship manager and multi-unit / bulk-purchase packages: clients here buy 7.3 units on average.",
+        "Advisor-led, relationship-based outreach (events, phone/in-person) for an older audience.",
+        "Prioritise the Website channel: 71% of this cluster comes from it (overall 55%)."
+      ],
+      "property_recommendations": [
+        "Offer several units in the same tower or adjacent towers as bundles.",
+        "Over-represented market: USA (86% vs 77% overall)."
+      ],
+      "data_supported_findings": [
+        "51 clients (2.5% of all buyers) generating 4.9% of total sold value (value index 1.90).",
+        "Average age 64.3 years (overall 55.5); 3.9% are companies (overall 5.1%).",
+        "Investment purpose 35.3% (overall 30.8%) - above average.",
+        "Loan applied 31.4% (overall 36.8%) - below average.",
+        "Average satisfaction 3.49/5 (overall 3.03).",
+        "Owns 7.29 units on average (overall 3.65); average unit price $330,963 (overall $347,090); 13.9% of their units are offices (overall 14.9%).",
+        "Geography: 13.7% live outside the USA (overall 23.1%); top countries {'USA': 86.3, 'UK': 5.9, 'Canada': 2.0}; top regions {'California': 47.1, 'Nevada': 11.8, 'Oregon': 7.8}.",
+        "Referral channels: {'Website': 70.6, 'Agency': 25.5, 'Client': 3.9}."
+      ],
+      "assumptions": [
+        "Large portfolios suggest portfolio-building behaviour, but the data does not show a higher 'Investment' share (35% vs 31% overall).",
+        "Marketing recommendations are rule-based interpretations of the measured traits; their effect on conversion has not been tested (no campaign data available)."
+      ],
+      "distinguishing_traits": {
+        "n_units": 4.336807323501272,
+        "age": 0.5033152160307405,
+        "satisfaction_score": 0.3262651477759604,
+        "avg_price": -0.23130355157462554
+      }
+    }
+  ],
+  "investment_profile": [
+    {
+      "cluster": 0,
+      "segment": "Office-Focused Senior Buyers",
+      "clients": 437,
+      "investors": 136,
+      "investment_rate": 0.3112128146453089,
+      "investment_lift_vs_overall": 1.0120741939684843,
+      "investor_spend_usd": 157042539.19,
+      "share_of_all_investor_spend": 0.20377081399658475,
+      "avg_units_per_investor": 3.5441176470588234,
+      "avg_unit_price_investor": 326047.57050735294,
+      "investor_loan_rate": 0.375,
+      "investor_avg_satisfaction": 2.911764705882353,
+      "investor_top_country": "USA",
+      "investor_value_rank": 2
+    },
+    {
+      "cluster": 1,
+      "segment": "Senior Buyers",
+      "clients": 415,
+      "investors": 118,
+      "investment_rate": 0.28433734939759037,
+      "investment_lift_vs_overall": 0.9246743069840337,
+      "investor_spend_usd": 137976932.68,
+      "share_of_all_investor_spend": 0.17903220382179036,
+      "avg_units_per_investor": 3.4745762711864407,
+      "avg_unit_price_investor": 336179.140319209,
+      "investor_loan_rate": 0.2796610169491525,
+      "investor_avg_satisfaction": 2.7966101694915255,
+      "investor_top_country": "USA",
+      "investor_value_rank": 4
+    },
+    {
+      "cluster": 2,
+      "segment": "Highly Satisfied Younger Buyers",
+      "clients": 397,
+      "investors": 110,
+      "investment_rate": 0.2770780856423174,
+      "investment_lift_vs_overall": 0.901066945178268,
+      "investor_spend_usd": 126926652.12999998,
+      "share_of_all_investor_spend": 0.1646938934876722,
+      "avg_units_per_investor": 3.7,
+      "avg_unit_price_investor": 310996.7439348485,
+      "investor_loan_rate": 0.4909090909090909,
+      "investor_avg_satisfaction": 4.554545454545455,
+      "investor_top_country": "USA",
+      "investor_value_rank": 5
+    },
+    {
+      "cluster": 3,
+      "segment": "Dissatisfied Younger Buyers",
+      "clients": 387,
+      "investors": 126,
+      "investment_rate": 0.32558139534883723,
+      "investment_lift_vs_overall": 1.0588012856872755,
+      "investor_spend_usd": 142688364.52999997,
+      "share_of_all_investor_spend": 0.18514553023714075,
+      "avg_units_per_investor": 3.5714285714285716,
+      "avg_unit_price_investor": 318171.8184378307,
+      "investor_loan_rate": 0.3968253968253968,
+      "investor_avg_satisfaction": 1.6825396825396826,
+      "investor_top_country": "USA",
+      "investor_value_rank": 3
+    },
+    {
+      "cluster": 4,
+      "segment": "Premium-Ticket Younger Buyers",
+      "clients": 313,
+      "investors": 107,
+      "investment_rate": 0.34185303514376997,
+      "investment_lift_vs_overall": 1.1117171874594145,
+      "investor_spend_usd": 160620638.03,
+      "share_of_all_investor_spend": 0.20841358223599096,
+      "avg_units_per_investor": 3.364485981308411,
+      "avg_unit_price_investor": 446473.38661993766,
+      "investor_loan_rate": 0.38317757009345793,
+      "investor_avg_satisfaction": 3.4205607476635516,
+      "investor_top_country": "USA",
+      "investor_value_rank": 1
+    },
+    {
+      "cluster": 5,
+      "segment": "High-Volume Senior Buyers",
+      "clients": 51,
+      "investors": 18,
+      "investment_rate": 0.35294117647058826,
+      "investment_lift_vs_overall": 1.1477761836441895,
+      "investor_spend_usd": 45427073.26,
+      "share_of_all_investor_spend": 0.058943976220820864,
+      "avg_units_per_investor": 7.666666666666667,
+      "avg_unit_price_investor": 333108.11960415356,
+      "investor_loan_rate": 0.2777777777777778,
+      "investor_avg_satisfaction": 3.5555555555555554,
+      "investor_top_country": "USA",
+      "investor_value_rank": 6
+    }
+  ],
+  "prd_segment_test": [
+    {
+      "prd_segment": "Global Investors",
+      "prd_description": "High income, investment purchases (international)",
+      "closest_cluster": 4,
+      "closest_cluster_name": "Premium-Ticket Younger Buyers",
+      "conditions_met": "0/2",
+      "supported_by_data": false,
+      "evidence": "investment_rate: 0.342 vs 0.307 overall (x1.11, need >= 1.25) -> no | pct_international: 0.249 vs 0.231 overall (x1.08, need >= 1.25) -> no",
+      "limitation": "income is not in the data"
+    },
+    {
+      "prd_segment": "First-Time Buyers",
+      "prd_description": "Younger, loan dependent",
+      "closest_cluster": 2,
+      "closest_cluster_name": "Highly Satisfied Younger Buyers",
+      "conditions_met": "1/3",
+      "supported_by_data": false,
+      "evidence": "avg_age: 46.3 vs 55.5 overall (x0.83, need <= 0.85) -> OK | loan_rate: 0.416 vs 0.368 overall (x1.13, need >= 1.25) -> no | investment_rate: 0.277 vs 0.307 overall (x0.90, need <= 0.9) -> no",
+      "limitation": "'first-time' cannot be observed (every client owns 3+ units); personal-use + young + loans used as proxy"
+    },
+    {
+      "prd_segment": "Corporate Buyers",
+      "prd_description": "Companies purchasing multiple units",
+      "closest_cluster": 5,
+      "closest_cluster_name": "High-Volume Senior Buyers",
+      "conditions_met": "1/2",
+      "supported_by_data": false,
+      "evidence": "pct_company: 0.0392 vs 0.0515 overall (x0.76, need >= 1.25) -> no | avg_units: 7.29 vs 3.65 overall (x2.00, need >= 1.25) -> OK",
+      "limitation": ""
+    },
+    {
+      "prd_segment": "Luxury Investors",
+      "prd_description": "High satisfaction, large investments",
+      "closest_cluster": 4,
+      "closest_cluster_name": "Premium-Ticket Younger Buyers",
+      "conditions_met": "2/3",
+      "supported_by_data": false,
+      "evidence": "avg_price: 4.52e+05 vs 3.47e+05 overall (x1.30, need >= 1.25) -> OK | avg_satisfaction: 3.34 vs 3.03 overall (x1.10, need >= 1.1) -> OK | investment_rate: 0.342 vs 0.307 overall (x1.11, need >= 1.25) -> no",
+      "limitation": ""
+    }
+  ]
+}

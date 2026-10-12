@@ -1,0 +1,171 @@
+{
+  "clients": {
+    "rows": 2000,
+    "columns": 12,
+    "column_names": [
+      "client_id",
+      "client_type",
+      "first_name",
+      "last_name",
+      "date_of_birth",
+      "gender",
+      "country",
+      "region",
+      "acquisition_purpose",
+      "satisfaction_score",
+      "loan_applied",
+      "referral_channel"
+    ],
+    "missing_values": {
+      "client_id": 0,
+      "client_type": 0,
+      "first_name": 0,
+      "last_name": 0,
+      "date_of_birth": 0,
+      "gender": 0,
+      "country": 0,
+      "region": 0,
+      "acquisition_purpose": 0,
+      "satisfaction_score": 0,
+      "loan_applied": 0,
+      "referral_channel": 0
+    },
+    "duplicate_rows": 0,
+    "unique_values": {
+      "client_id": 2000,
+      "client_type": 2,
+      "first_name": 337,
+      "last_name": 224,
+      "date_of_birth": 1889,
+      "gender": 2,
+      "country": 10,
+      "region": 57,
+      "acquisition_purpose": 2,
+      "satisfaction_score": 5,
+      "loan_applied": 2,
+      "referral_channel": 3
+    },
+    "categorical_distributions": {
+      "client_type": {
+        "Individual": 1897,
+        "Company": 103
+      },
+      "gender": {
+        "M": 1012,
+        "F": 988
+      },
+      "country": {
+        "USA": 1538,
+        "UK": 95,
+        "Canada": 85,
+        "Germany": 56,
+        "France": 53,
+        "Belgium": 43,
+        "Mexico": 40,
+        "Australia": 39,
+        "Russia": 36,
+        "Denmark": 15
+      },
+      "acquisition_purpose": {
+        "Home": 1385,
+        "Investment": 615
+      },
+      "satisfaction_score": {
+        "4": 417,
+        "5": 405,
+        "3": 404,
+        "1": 395,
+        "2": 379
+      },
+      "loan_applied": {
+        "No": 1264,
+        "Yes": 736
+      },
+      "referral_channel": {
+        "Website": 1103,
+        "Agency": 705,
+        "Client": 192
+      }
+    },
+    "duplicate_client_id": 0
+  },
+  "properties": {
+    "rows": 10000,
+    "columns": 9,
+    "column_names": [
+      "listing_id",
+      "tower_number",
+      "transaction_date",
+      "unit_category",
+      "unit_number",
+      "floor_area_sqft",
+      "sale_price",
+      "listing_status",
+      "client_ref"
+    ],
+    "missing_values": {
+      "listing_id": 0,
+      "tower_number": 0,
+      "transaction_date": 0,
+      "unit_category": 0,
+      "unit_number": 0,
+      "floor_area_sqft": 0,
+      "sale_price": 0,
+      "listing_status": 0,
+      "client_ref": 2695
+    },
+    "duplicate_rows": 0,
+    "unique_values": {
+      "listing_id": 10000,
+      "tower_number": 20,
+      "transaction_date": 24,
+      "unit_category": 2,
+      "unit_number": 70,
+      "floor_area_sqft": 1208,
+      "sale_price": 9998,
+      "listing_status": 2,
+      "client_ref": 2000
+    },
+    "categorical_distributions": {
+      "unit_category": {
+        "Apartment": 8547,
+        "Office": 1453
+      },
+      "listing_status": {
+        "Sold": 7305,
+        "Available": 2695
+      }
+    },
+    "duplicate_listing_id": 0
+  },
+  "format_patterns": {
+    "clients.date_of_birth": {
+      "9/99/9999": 871,
+      "99-99-9999": 855,
+      "99/99/9999": 274
+    },
+    "properties.transaction_date": {
+      "99-99-9999": 10000
+    },
+    "properties.sale_price": {
+      "$999,999.99": 9998,
+      "$99,999.99": 2
+    }
+  },
+  "join_analysis": {
+    "found": true,
+    "primary_key_in_clients": "client_id",
+    "foreign_key_in_properties": "client_ref",
+    "share_of_property_refs_matching": 1.0,
+    "clients_with_at_least_one_property": 2000,
+    "total_clients": 2000,
+    "properties_with_null_reference": 2695
+  },
+  "fields_missing_vs_prd": {
+    "income / net worth": "not present (PRD mentions 'high income')",
+    "bedrooms / property type beyond Apartment-Office": "not present",
+    "loan amount": "not present (only a Yes/No flag)",
+    "first-time-buyer flag": "not present (every client owns 3+ units)",
+    "client_type value 'Corporate'": "dataset uses 'Company'"
+  }
+}
